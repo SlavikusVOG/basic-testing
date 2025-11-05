@@ -86,7 +86,7 @@ describe('BankAccount', () => {
     // Write your tests here
     const initialBalance = 10;
     const bankAccount = getBankAccount(initialBalance);
-    await expect(bankAccount.synchronizeBalance).toThrow(
+    await expect(bankAccount.synchronizeBalance()).rejects.toThrow(
       SynchronizationFailedError,
     );
   });
