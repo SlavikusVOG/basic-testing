@@ -23,9 +23,9 @@ const testCases = [
   { a: 3, b: 2, action: Action.Exponentiate, expected: 9 },
 ];
 
-describe.each(testCases)('simpleCalculator', ({ a, b, action, expected }) => {
+describe('simpleCalculator', () => {
   // Consider to use Jest table tests API to test all cases above
-  test(`should be ${expected}`, () => {
+  test.each(testCases)('test cases', ({ a, b, action, expected }) => {
     if (action === Action.Divide) {
       expect(simpleCalculator({ a, b, action })).toBeCloseTo(expected);
     } else {
