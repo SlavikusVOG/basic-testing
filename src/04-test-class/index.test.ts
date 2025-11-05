@@ -54,7 +54,7 @@ describe('BankAccount', () => {
     // Write your test here
     const initialBalance = 10;
     const bankAccount = getBankAccount(initialBalance);
-    expect(bankAccount.deposit(5).getBalance()).toBe(5);
+    expect(bankAccount.withdraw(5).getBalance()).toBe(5);
   });
 
   test('should transfer money', () => {
